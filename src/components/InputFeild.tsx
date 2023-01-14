@@ -8,9 +8,12 @@ interface Props{
 }
 
 const InputFeild: React.FC<Props> = ( { todo, setTodo, handleAdd } ) => {
-  return (
+//   const inputRef = useRef<HTMLInputElement>(null);
+  
+    return (
     <form className='input' onSubmit={(e) => handleAdd(e)}>
         <input
+            // ref={inputRef}
             value={todo}
             onChange={
                 (e)=>setTodo(e.target.value)
