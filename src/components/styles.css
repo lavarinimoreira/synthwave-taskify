@@ -85,6 +85,11 @@
     outline: none;
 }
 
+.todos__single--edit{
+    color: black;
+    text-transform: none;
+}
+
 .icon{
     margin-left: 10px;
     font-size: 25px;
