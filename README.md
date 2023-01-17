@@ -1,6 +1,6 @@
 # Synthwave Taskify
 ## Introduction
-This is a simple to-do app built with TypeScript and React. It allows users to add, edit, and delete tasks from a list.
+A synthwave to-do app built with TypeScript and React. It allows users to add, edit, and delete tasks from a list.
 
 ## Getting Started
 ### Prerequisites
