@@ -72,9 +72,14 @@
     background-color: black;
 }
 
-.todos__heading{
+.todos__heading, .todos__heading--done{
     color: #40ffff;
     font-size: 30px;
+    align-self: center;
+}
+
+.todos__heading--done{
+    color: hsl(317 100% 54%);
 }
 
 .todos__single{
