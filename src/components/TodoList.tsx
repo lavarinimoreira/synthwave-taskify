@@ -23,7 +23,7 @@ const TodoList: React.FC<Props> = ({ todos, setTodos, completedTodos, setComplet
             <span className="todos__heading">
               Active Tasks
             </span>
-            {todos.map((todo, index) =>
+            {todos.map((todo, index) => (
               <SingleTodo
                 index={index}
                 todo={todo}
@@ -31,7 +31,8 @@ const TodoList: React.FC<Props> = ({ todos, setTodos, completedTodos, setComplet
                 key={todo.id}
                 setTodos={setTodos}
               />
-            )}
+            ))}
+            {provided.placeholder}
           </div>
         )
         }
@@ -47,7 +48,7 @@ const TodoList: React.FC<Props> = ({ todos, setTodos, completedTodos, setComplet
               <span className="todos__heading">
                 Completed Tasks
               </span>
-              {completedTodos.map((todo, index) =>
+              {completedTodos.map((todo, index) => (
                 <SingleTodo
                   index={index}
                   todo={todo}
@@ -55,7 +56,8 @@ const TodoList: React.FC<Props> = ({ todos, setTodos, completedTodos, setComplet
                   key={todo.id}
                   setTodos={setCompletedTodos}
                 />
-              )}
+              ))}
+              {provided.placeholder}
             </div>
           )
         }
