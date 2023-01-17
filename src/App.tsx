@@ -4,6 +4,7 @@ import InputFeild from './components/InputFeild';
 import TodoList from './components/TodoList';
 import { Todo } from './model';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
+import styled from 'styled-components';
 
 const App: React.FC = () => {
 
@@ -46,9 +47,13 @@ const App: React.FC = () => {
         complete.splice(destination.index, 0, add);
       }
 
+      console.log(result);
+      
+
       setCompletedTodos(complete)
       setTodos(active)
   }
+
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>

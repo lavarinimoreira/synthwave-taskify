@@ -49,7 +49,8 @@ const SingleTodo = ({ index, todo, todos, setTodos }: Props) => {
         <Draggable draggableId={todo.id.toString()} index={index}>
             {(provided, snapshot) => (
                 <form
-                    className={`todos__single ${snapshot.isDragging ? 'drag' : ''}`}
+                    
+                    className={`todos__single ${snapshot.isDragging ? 'drag' : ''} ${todo.isDone ?'todos__single--done ' : ''} ${snapshot.isDragging && todo.isDone ? 'drag__done' : ''}`}
                     onSubmit={(e) => handleEdit(e, todo.id)}
                     {...provided.draggableProps}    
                     {...provided.dragHandleProps}
@@ -60,16 +61,16 @@ const SingleTodo = ({ index, todo, todos, setTodos }: Props) => {
                             ref={inputRef}
                             value={editTodo}
                             onChange={(e) => setEditTodo(e.target.value)}
-                            className='todos__single--text todos__single--edit'
+                            className={`todos__single--text todos__single--edit ${todo.isDone ? 'todos__single--text--done todos__single--edit--done': ''} `}
                         />
                     ) : todo.isDone ?
-                        (<s className='todos__single--text'>{todo.todo}</s>)
+                        (<s className='todos__single--text--done'>{todo.todo}</s>)
                         :
                         (<span className='todos__single--text'>{todo.todo}</span>)
                     }
 
                     <div>
-                        <span className='icon'
+                        <span className={`icon ${todo.isDone ? 'icon__done' : ''}`}
                             onClick={() => {
                                 if (!edit && !todo.isDone) {
                                     setEdit(!edit);
@@ -77,10 +78,10 @@ const SingleTodo = ({ index, todo, todos, setTodos }: Props) => {
                             }}>
                             <AiFillEdit />
                         </span>
-                        <span className='icon' onClick={() => handleDelete(todo.id)}>
+                        <span className={`icon ${todo.isDone ? 'icon__done' : ''}`} onClick={() => handleDelete(todo.id)}>
                             <AiFillDelete />
                         </span>
-                        <span className='icon' onClick={() => handleDone(todo.id)}>
+                        <span className={`icon ${todo.isDone ? 'icon__done' : ''}`} onClick={() => handleDone(todo.id)}>
                             <MdDone />
                         </span>
                     </div>
