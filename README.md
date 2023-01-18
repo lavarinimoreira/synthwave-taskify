@@ -9,7 +9,7 @@ A synthwave to-do app built with TypeScript and React. It allows users to add, e
 ### Installation
 1. Clone the repository
 ```
-git clone https://github.com/lavarinimoreira/synthwave-taskify
+git clone https://github.com/lavarinimoreira/synthwave-taskify.git
 ```
 2. Install dependencies
 ```
