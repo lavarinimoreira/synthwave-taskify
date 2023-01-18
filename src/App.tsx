@@ -58,7 +58,7 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className='App'>
-        <span className='heading'>Taskify</span>
+        <span className='heading'>Synthwave Taskify</span>
         <InputFeild
           todo={todo}
           setTodo={setTodo}
