@@ -76,10 +76,12 @@
     color: #40ffff;
     font-size: 30px;
     align-self: center;
+    text-shadow: 0 0 0.125em #40ffff, 0 0 0.45em #40ffff;
 }
 
 .todos__heading--done{
     color: hsl(317 100% 54%);
+    text-shadow: 0 0 0.125em var(--clr-neon), 0 0 0.45em var(--clr-neon)
 }
 
 .todos__single{
@@ -175,6 +177,50 @@
     box-shadow: inset 0 0 20px var(--clr-neon);
 }
 
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    
+}
+
+.header div{
+    margin: 0 40px;
+}
+
+.header a{
+    letter-spacing: .15em;
+    text-shadow: 0 0 0.125em #40ffff, 0 0 0.8em #40ffff;
+}
+
+.header a,
+.header div a{
+    color: #40ffff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.2s;
+    padding: 1em;
+}
+
+.header div a {
+    font-size: 30px;
+    
+}
+
+.header a:hover{
+    text-shadow: 0 0 0.125em var(--clr-neon), 0 0 0.45em var(--clr-neon);
+    cursor: pointer;
+    color: var(--clr-neon);
+}
+
+.header div a:hover{
+    text-shadow: 0 0 0.125em var(--clr-neon), 0 0 0.45em var(--clr-neon);
+    cursor: pointer;
+    color: var(--clr-neon);
+    transition: 0.2s;
+}
 
 
 @media (max-width:1100px){
@@ -196,4 +242,20 @@
         width: 95%;
         flex-direction: column;
     }
+}
+
+@media (max-width: 880px){
+    .header{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 540px){
+    .header div{
+        display: flex;
+    
+    }
+
+   
 }

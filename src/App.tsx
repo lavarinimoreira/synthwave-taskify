@@ -5,6 +5,7 @@ import TodoList from './components/TodoList';
 import { Todo } from './model';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
 import styled from 'styled-components';
+import Header from './components/Header';
 
 const App: React.FC = () => {
 
@@ -58,6 +59,7 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className='App'>
+        <Header />
         <span className='heading'>Synthwave Taskify</span>
         <InputFeild
           todo={todo}
