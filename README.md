@@ -41,4 +41,4 @@ yarn start
 ## Authors
 - Gabriel Lavarini <gabriel@lavarinimoreira.me>
 - [lavarinimoreira.me](https://lavarinimoreira.me)
-- [github.com/lavarinimoreira](github.com/lavarinimoreira)
+- [github.com/lavarinimoreira](https://github.com/lavarinimoreira)
