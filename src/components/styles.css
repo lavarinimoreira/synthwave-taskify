@@ -112,6 +112,10 @@
     outline: none;
 }
 
+.todos__single:active{
+    box-shadow: 0 0 20px #40ffff;
+}
+
 .todos__single--edit{
     color: black;
     text-transform: none;
@@ -166,6 +170,10 @@
     text-transform: none;
 }
 
+.todos__single--done:active{
+    box-shadow: 0 0 20px var(--clr-neon);
+}
+
 .icon__done{
     margin-left: 10px;
     font-size: 25px;
@@ -177,7 +185,7 @@
     box-shadow: inset 0 0 20px var(--clr-neon);
 }
 
-.header{
+/* .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -219,7 +227,7 @@
     cursor: pointer;
     color: var(--clr-neon);
     transition: 0.2s;
-}
+} */
 
 
 @media (max-width:1100px){
@@ -229,32 +237,26 @@
 }
 
 @media (max-width: 700px){
-    .input{
-        width: 95%;
-    }
     .todos{
-        width: 95%;
+        width: 100%;
         margin-bottom: 10px;
     }
 
     .container{
-        width: 95%;
         flex-direction: column;
     }
 }
 
-@media (max-width: 880px){
+/* @media (max-width: 880px){
     .header{
         flex-direction: column;
         justify-content: center;
     }
-}
+} */
 
-@media (max-width: 540px){
+/* @media (max-width: 540px){
     .header div{
         display: flex;
     
-    }
-
-   
-}
+    }  
+} */

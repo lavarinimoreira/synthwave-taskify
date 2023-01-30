@@ -6,6 +6,7 @@ import { Todo } from './model';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
 import styled from 'styled-components';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
 
@@ -23,57 +24,61 @@ const App: React.FC = () => {
 
   };
 
-  const onDragEnd = (result:DropResult) => {
+  const onDragEnd = (result: DropResult) => {
     const { source, destination } = result;
 
-    if(!destination) return;
+    if (!destination) return;
 
-    if(destination.droppableId===source.droppableId && destination.index===source.index) return;
+    if (destination.droppableId === source.droppableId && destination.index === source.index) return;
 
     let add,
-        active = todos,
-        complete = completedTodos;
+      active = todos,
+      complete = completedTodos;
 
-      if(source.droppableId==='TodosList'){
-        add=active[source.index];
-        active.splice(source.index, 1);
-      }else{
-        add=complete[source.index];
-        complete.splice(source.index, 1);
-      }
+    if (source.droppableId === 'TodosList') {
+      add = active[source.index];
+      active.splice(source.index, 1);
+    } else {
+      add = complete[source.index];
+      complete.splice(source.index, 1);
+    }
 
-      if(destination.droppableId==='TodosList'){
-        active.splice(destination.index, 0, add);
-      }else{
-        complete.splice(destination.index, 0, add);
-      }
+    if (destination.droppableId === 'TodosList') {
+      active.splice(destination.index, 0, add);
+    } else {
+      complete.splice(destination.index, 0, add);
+    }
 
-      console.log(result);
-      
+    console.log(result);
 
-      setCompletedTodos(complete)
-      setTodos(active)
+
+    setCompletedTodos(complete)
+    setTodos(active)
   }
 
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      <div className='App'>
-        <Header />
-        <span className='heading'>Synthwave Taskify</span>
-        <InputFeild
-          todo={todo}
-          setTodo={setTodo}
-          handleAdd={handleAdd}
-        />
-        <TodoList
-          todos={todos}
-          setTodos={setTodos}
-          completedTodos={completedTodos}
-          setCompletedTodos={setCompletedTodos}
-        />
-      </div>
-    </DragDropContext>
+    <>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <div className='main'>
+          <h1 className='heading'>Taskify</h1>
+          <InputFeild
+            todo={todo}
+            setTodo={setTodo}
+            handleAdd={handleAdd}
+          />
+          <TodoList
+            todos={todos}
+            setTodos={setTodos}
+            completedTodos={completedTodos}
+            setCompletedTodos={setCompletedTodos}
+          />
+          <Footer />
+        </div>
+
+      </DragDropContext>
+      
+    </>
   );
 }
 
