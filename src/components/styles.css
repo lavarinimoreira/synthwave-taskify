@@ -1,16 +1,16 @@
 :root {
     --clr-neon: hsl(317 100% 54%);
     --clr-bg: hsl(323 21% 16%);
-  }
+}
 
-.input{
+.input {
     display: flex;
     width: 95%;
     position: relative;
     align-items: center;
 }
 
-.input__box{
+.input__box {
     width: 100%;
     border-radius: 50px;
     padding: 20px 30px;
@@ -27,7 +27,7 @@
     outline: none;
 }
 
-.input__submit{
+.input__submit {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -45,17 +45,19 @@
     font-weight: bold;
 }
 
-.input__submit:hover {
-    background-color: #40ffff;
-    color: black;
-    box-shadow: 0 0 10px #40ffff;
+@media (hover: hover) {
+    .input__submit:hover {
+        background-color: #40ffff;
+        color: black;
+        box-shadow: 0 0 10px #40ffff;
+    }
 }
 
-.input__submit:active{
+.input__submit:active {
     transform: scale(0.8);
 }
 
-.container{
+.container {
     display: flex;
     width: 95%;
     margin-top: 10px;
@@ -63,7 +65,7 @@
     align-items: flex-start;
 }
 
-.todos{
+.todos {
     display: flex;
     width: 47.5%;
     flex-direction: column;
@@ -72,19 +74,20 @@
     background-color: black;
 }
 
-.todos__heading, .todos__heading--done{
+.todos__heading,
+.todos__heading--done {
     color: #40ffff;
     font-size: 30px;
     align-self: center;
     text-shadow: 0 0 0.125em #40ffff, 0 0 0.45em #40ffff;
 }
 
-.todos__heading--done{
+.todos__heading--done {
     color: hsl(317 100% 54%);
     text-shadow: 0 0 0.125em var(--clr-neon), 0 0 0.45em var(--clr-neon)
 }
 
-.todos__single{
+.todos__single {
     display: flex;
     border-radius: 5px;
     padding: 20px;
@@ -94,12 +97,12 @@
     transition: 0.2s;
 }
 
-.todos__single:hover{
+.todos__single:hover {
     transform: scale(1.015);
     box-shadow: inset 0 0 20px #40ffff;
 }
 
-.todos__single--text{
+.todos__single--text {
     flex: 1;
     padding: 5px;
     border: none;
@@ -108,27 +111,27 @@
     text-transform: uppercase;
 }
 
-.todos__single--text:focus{
+.todos__single--text:focus {
     outline: none;
 }
 
-.todos__single:active{
+.todos__single:active {
     box-shadow: 0 0 20px #40ffff;
 }
 
-.todos__single--edit{
+.todos__single--edit {
     color: black;
     text-transform: none;
 }
 
-.icon{
+.icon {
     margin-left: 10px;
     font-size: 25px;
     cursor: pointer;
     color: #40ffff;
 }
 
-.drag{
+.drag {
     box-shadow: inset 0 0 20px #40ffff;
 }
 
@@ -137,7 +140,7 @@
 
 
 
-.todos__single--done{
+.todos__single--done {
     display: flex;
     border-radius: 5px;
     padding: 20px;
@@ -147,12 +150,12 @@
     transition: 0.2s;
 }
 
-.todos__single--done:hover{
+.todos__single--done:hover {
     transform: scale(1.015);
     box-shadow: inset 0 0 20px var(--clr-neon);
 }
 
-.todos__single--text--done{
+.todos__single--text--done {
     flex: 1;
     padding: 5px;
     border: none;
@@ -161,27 +164,27 @@
     text-transform: uppercase;
 }
 
-.todos__single--text--done:focus{
+.todos__single--text--done:focus {
     outline: none;
 }
 
-.todos__single--edit--done{
+.todos__single--edit--done {
     color: black;
     text-transform: none;
 }
 
-.todos__single--done:active{
+.todos__single--done:active {
     box-shadow: 0 0 20px var(--clr-neon);
 }
 
-.icon__done{
+.icon__done {
     margin-left: 10px;
     font-size: 25px;
     cursor: pointer;
     color: var(--clr-neon);
 }
 
-.drag__done{
+.drag__done {
     box-shadow: inset 0 0 20px var(--clr-neon);
 }
 
@@ -230,19 +233,19 @@
 } */
 
 
-@media (max-width:1100px){
-    .todos{
+@media (max-width:1100px) {
+    .todos {
         width: 45%;
     }
 }
 
-@media (max-width: 700px){
-    .todos{
+@media (max-width: 700px) {
+    .todos {
         width: 100%;
         margin-bottom: 10px;
     }
 
-    .container{
+    .container {
         flex-direction: column;
     }
 }
