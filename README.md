@@ -40,4 +40,5 @@ yarn start
 - Create React App - A tool for creating React applications with zero configuration
 ## Authors
 - Gabriel Lavarini <gabriel@lavarinimoreira.me>
-- github.com/lavarinimoreira
+- [lavarinimoreira.me](https://lavarinimoreira.me)
+- [github.com/lavarinimoreira](https://github.com/lavarinimoreira)
